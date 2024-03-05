@@ -1,0 +1,8 @@
+# Depositing Sepolia ETH
+cast send -i 0xc644cc19d2A9388b71dd1dEde07cFFC73237Dca8 --value 0.1ether --rpc-url https://sepolia.infura.io/v3/$INFURA_KEY
+
+# Confirming the bridged Sepolia ETH on Blast
+cast balance $YOUR_ADDRESS --rpc-url https://sepolia.blast.io
+
+# Converting to WETH (Rebasing) on testnet; do not transfer mainnet ETH to this address
+cast send -i 0x4200000000000000000000000000000000000023 --value 0.1ether --rpc-url https://sepolia.blast.io 
